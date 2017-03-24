@@ -7,6 +7,7 @@ public class LinkedList {
 
 	public Node createLinkedList() {
 
+		//List : 9 -> 10 -> 7 -> 5 -> 2
 		Node node1 = new Node(2);
 		Node node2 = new Node(5);
 		node2.setNext(node1);
@@ -25,5 +26,15 @@ public class LinkedList {
 		node.setNext(this.startNode);
 		this.startNode = node;
 		return node;
+	}
+
+	public void printLinkedList() {
+
+		Node head = this.startNode;
+		while (head != null) {
+			System.out.print(head.getValue() + " -> ");
+			head = head.getNext();
+		}
+		System.out.print("null");
 	}
 }
